@@ -1,0 +1,63 @@
+.gridContainer {
+    position: relative;
+}
+
+.boardTable {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+}
+
+.boardBody {
+    height: 100%;
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 8px;
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns: 59px 54px 55px;
+    grid-template-rows: 54px 53px 56px;
+}
+
+.boardBody > .field:nth-child(n+4):nth-child(-n+6) {
+    margin: 0 auto;
+}
+
+.field {
+    height: 100%;
+    width: 100%;
+}
+
+.mark {
+    margin:  7px auto 0 auto;
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes blink {
+    0% { opacity: 0.1; } 
+    25% { opacity: 0.4; }
+    50% { opacity: 0.7; }
+    75% { opacity: 0.4; }
+    100% { opacity: 0.1; }
+}
+
+@keyframes dissapearing {
+    0% { opacity: 1; }
+    25% { opacity: 1; }
+    50% { opacity: 0.5; }
+    75% { opacity: 0.3; }
+    100% { opacity: 0.1; }
+  }
+
+.winningField {
+    animation: blink 2s infinite !important;
+    transition: opacity 0.3s ease;
+}
+
+.disapearingField {
+    animation: dissapearing 5s infinite;
+    transition: opacity 0.3s ease;
+}
