@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + Lottie
 
 ### Запуск
 1. Перейдите в папку проекта:
