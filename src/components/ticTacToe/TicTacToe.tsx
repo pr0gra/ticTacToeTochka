@@ -134,9 +134,11 @@ export const TicTacToe = memo(() => {
                       ? styles.winningField
                       : ""
                   }
-                  ${winningCombination?.length 
-                    ? styles.disapearingField // анимация пропадания всех полей после окончания игры    
-                    : ""}
+                  ${
+                    winningCombination?.length
+                      ? styles.disapearingField // анимация пропадания всех полей после окончания игры
+                      : ""
+                  }
                   `}
                   key={`${rowIndex}-${cellIndex}`}
                   onClick={() => {
@@ -160,7 +162,7 @@ export const TicTacToe = memo(() => {
                       }}
                       className={styles.mark}
                       loop={false}
-                      animationData={circleAnimationData}
+                      animationData={crossAnimationData}
                     />
                   ) : compCombination.includes(cell) ? (
                     <Lottie
@@ -171,7 +173,7 @@ export const TicTacToe = memo(() => {
                       }}
                       className={styles.mark}
                       loop={false}
-                      animationData={crossAnimationData}
+                      animationData={circleAnimationData}
                     />
                   ) : null}
                 </div>
